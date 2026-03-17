@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["DOM", "ES2020"],
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+
+    "types": ["vite/client", "node"],
+
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./*", "./server/*"]
+    }
+  },
+  "include": ["src", "server"]
+}

@@ -1,0 +1,164 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  background: rgba(10, 10, 14, 0.4);
+  backdrop-filter: saturate(150%) blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.nav__inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 16px;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav__left {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.brand__logo {
+  display: block;
+  height: 80px;
+  width: auto; /* wichtig: kein Cropping, Seitenverhältnis bleibt */
+}
+
+.chip {
+  margin-left: 6px;
+  font-size: 11px;
+  line-height: 1;
+  padding: 2px 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.06);
+}
+
+/* Menüs */
+.menu {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.92;
+  transition: opacity .15s ease;
+}
+
+.menu a:hover,
+.menu a:focus {
+  opacity: 1;
+}
+
+/* Desktop sichtbar, Mobile verborgen */
+.menu--desktop {
+  display: none;
+}
+
+/* Toggle (Burger) */
+.nav__toggle {
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger,
+.burger::before,
+.burger::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.burger::before { transform: translateY(-6px); }
+.burger::after  { transform: translateY( 6px); }
+
+.burger.is-open { background: transparent; }
+.burger.is-open::before { transform: rotate(45deg); }
+.burger.is-open::after  { transform: rotate(-45deg); }
+
+/* Mobile Drawer */
+.menu-drawer {
+  position: fixed;
+  inset: 64px 0 0 0;
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .2s ease, opacity .2s ease;
+  background: rgba(10,10,14,0.75);
+  backdrop-filter: blur(10px) saturate(150%);
+  padding: 16px;
+}
+
+.menu-drawer.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu--mobile {
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 900px) {
+  .menu--desktop { display: inline-flex; }
+  .nav__toggle, .menu-drawer { display: none; }
+}
+
+@media (max-width: 720px) {
+  .nav { height: 56px; }
+  .menu-drawer { inset: 56px 0 0 0; }
+  .brand__logo { height: 42px; }
+  .chip { display: none; }
+}
+/* ⭐ Neon-Pulse Effekt für das Banner-Logo ⭐ */
+.brand__logo {
+  height: 40px;
+  width: auto;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.35));
+  animation: brandPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes brandPulse {
+  0% {
+    filter: drop-shadow(0 0 4px rgba(0, 255, 255, 0.25))
+            drop-shadow(0 0 8px rgba(0, 255, 255, 0.15));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.55))
+            drop-shadow(0 0 20px rgba(0, 255, 255, 0.35));
+  }
+  100% {
+    filter: drop-shadow(0 0 4px rgba(0, 255, 255, 0.25))
+            drop-shadow(0 0 8px rgba(0, 255, 255, 0.15));
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\Wagner B\\Desktop\\token launch\\neonlaunch\\contracts\\NeonLaunchFactory.sol": {
+      "lastModificationDate": 1771671002899,
+      "contentHash": "c9fee7f2dbd22625cac8f87916e4c466",
+      "sourceName": "contracts/NeonLaunchFactory.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./NeonToken.sol",
+        "./NeonLpLocker.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IPancakeFactoryV2",
+        "IPancakeRouterV2",
+        "NeonLaunchFactory"
+      ]
+    },
+    "C:\\Users\\Wagner B\\Desktop\\token launch\\neonlaunch\\contracts\\NeonToken.sol": {
+      "lastModificationDate": 1771671033969,
+      "contentHash": "de5f1dba0bce1d27d5e8ea63d18d3d44",
+      "sourceName": "contracts/NeonToken.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20",
+        "NeonToken",
+        "Ownable"
+      ]
+    },
+    "C:\\Users\\Wagner B\\Desktop\\token launch\\neonlaunch\\contracts\\NeonLpLocker.sol": {
+      "lastModificationDate": 1771670966763,
+      "contentHash": "904b84bf6cc7a7f245df9ef5e3413fed",
+      "sourceName": "contracts/NeonLpLocker.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20Minimal",
+        "NeonLpLocker"
+      ]
+    }
+  }
+}
